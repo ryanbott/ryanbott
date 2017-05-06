@@ -1,0 +1,65 @@
+.footer {
+  background: var(--main);
+
+  &_logo {
+    width: 128px;
+    height:128px;
+    span {
+      position:absolute;
+      margin-left: -999em;
+    }
+  }
+
+  &_main {
+    padding: 1em 1em 2em;
+    p {
+      font-size: 1.5em;
+      color: grey;
+      text-transform: uppercase;
+    }
+    a {
+      font-size:.8em;
+      color: var(--offwhite);
+      text-decoration:none;
+      text-transform:none;
+    }
+    i.fa {
+      font-size:2em;
+      padding:.25em;
+    }
+
+
+  }
+  &_bottom {
+    background-color: #2d2d2d;
+    padding:1em;
+    text-align:center;
+    .quotes {
+      margin: auto;
+      font-size:1.25em;
+      color: var(--offwhite);
+      padding:2em 1em;
+      width: 52%;
+      p {
+        color: var(--offwhite);
+        margin-bottom:.2em;
+      }
+      span.author {
+        font-size:.8em;
+        color:#939393;
+      }
+    }
+  }
+}
+
+.copyright {
+  color: #939393;
+  font-size:12px;
+  text-align:center;
+}
+.location {
+  color: var(--offwhite);
+  float:left;
+  margin-top: 4em;
+  clear:both;
+}

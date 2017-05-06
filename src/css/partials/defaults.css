@@ -80,4 +80,12 @@ a {
 
 		}
 	}
+	&_2 {
+		lost-column: 1/6 0;
+		@media (--mobile-max) {
+				lost-column:1;
+				padding-bottom:2em;
+
+		}
+	}
 }

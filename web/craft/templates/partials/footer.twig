@@ -1,10 +1,58 @@
-<section id="footer">
-  <div class="footer">
+<footer id="footer" class="footer">
+
+  <div class="footer_top">
     <div class="row">
-      <div class="c_3">
-        footer stuff
+      <div class="footer_top_half">
+
+      </div>
+      <div class="footer_top_half">
 
       </div>
     </div>
+
+
+  </div> <!--END footer_top-->
+  <div class="footer_main">
+    <div class="container row">
+      <div class="c_3">
+        <div class="footer_logo">
+          <a href="{{ siteUrl }}"><img src="http://rb.dev/globals/rb.png)" alt=""><span> {{ siteName }} </span></a>
+        </div>
+        <div class="footer_social">
+          {% for icons in footer.socialIcon %}
+            <a href="{{icons.socialLink}}"  alt="{{icons.socialName}}"><i class="fa fa-{{icons.iconImage}}" aria-hidden="true"></i></a>
+          {% endfor %}
+        </div>
+        <span class="location">OKC</span>
+      </div>
+      <div class="c_3">
+        <p>Explore</p>
+        {% for link in footer.footerColumn1 %}
+          <p><a href="{{link.footerLink.url}}" {{link.footerLink.target}}>{{link.footerLink.text}}</a></p>
+        {% endfor %}
+      </div>
+      <div class="c_2">
+        <p>Blog</p>
+        {% for link in footer.footerColumn2 %}
+          <p><a href="{{link.footerLink.url}}" {{link.footerLink.target}}>{{link.footerLink.text}}</a></p>
+        {% endfor %}
+      </div>
+      <div class="c_4">
+        <p>Featured Posts</p>
+        {% for link in footer.footerColumn3 %}
+          <p><a href="{{link.footerLink.url}}" {{link.footerLink.target}}>{{link.footerLink.text}}</a></p>
+        {% endfor %}
+      </div>
+    </div>
+  </div><!--END footer__main-->
+  <div class="footer_bottom">
+    <div class="quotes">
+      {% set quote = footer.footerQuote.order('RAND()').first() %}
+      <p>"{{quote.quote}}"</p>
+      <span class="author">- {{quote.author}}</span>
+    </div>
+    <div class="copyright">
+      <span>&copy; ryanbott.com</span>
+    </div>
   </div>
-</section>
+</footer>

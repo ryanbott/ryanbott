@@ -11,6 +11,8 @@
 @import 'partials/blocks.css';
 @import 'partials/accordion.css';
 @import 'partials/slider.css';
+@import 'partials/footer.css';
+
 
 /*CSS Variable declarations*/
 :root {
