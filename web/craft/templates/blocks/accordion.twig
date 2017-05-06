@@ -1,0 +1,22 @@
+<section class="content">
+{% if block.sectionHeader | length %}
+  <hr>
+  <h2>{{ block.sectionHeader }}</h2>
+{% endif %}
+  <div class="row" class="accordion" id="accordion">
+    <ul class="accordion" data-accordion data-active-default data-multi-expand="true" data-allow-all-closed="true">
+  {% for item in block.accordionItems %}
+
+    <div class="js-accordion" id="toggle_{{item.id}}" data-accordion-prefix-classes="toggle_{{item.id}}">
+      <li class="accordion-item" id="{{item.id}}" data-active-on-load data-accordion-item>
+
+        <div class="js-accordion__panel">
+          <h2 class="js-accordion__header">{{item.heading}}</h2>
+          <div class="js-accordion__content"><p>{{item.itemContent}}</p></div>
+        </div>
+    </li>
+  </div>
+    {% endfor %}
+  </ul>
+</div>
+</section>

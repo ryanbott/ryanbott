@@ -1,0 +1,18 @@
+<section id="recipe">
+  <div class="recipe">
+    <div class="row recipe_text">
+      <div class="recipe_text_title">
+        <h1 class="recipe_overflow">{{ block.sectionHeader}}</h1>
+      </div>
+      <div class="recipe_text_content">
+        <hr class="header_line" style="background-color:{{ block.color }};">
+        <span class="recipe_rating"> * * * * * </span>
+        <p class="recipe_lead">{{block.sectionBody}}</p>
+      </div>
+    </div>
+    <div class="recipe_image">
+      <img src="{{ block.blockImage.first().url}}" alt="{{ block.blockImage.first().title}}">
+    </div>
+      <span class="recipe_scroll">scroll down</span>
+  </div>
+</section>

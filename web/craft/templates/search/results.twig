@@ -1,0 +1,45 @@
+{% extends "_layout" %}
+{% set title = "Search" %}
+{% block content %}
+
+<div class="row page">
+<div class="main">
+	<section class="search_results">
+		<h1>Search Results</h1>
+
+		{% set query = craft.request.getParam('q') %}
+		{% set entries = craft.entries.search(query).order('score') %}
+
+		<div class="search_results">
+
+			{% if entries|length %}
+				<p>{{ entries|length }} result{% if entries|length > 1 %}s{% endif %} for “{{ query }}”:</p>
+
+				<ul>
+					{% for entry in entries %}
+						<li class="results">
+							<h2><a href="{{ entry.url }}">{{ entry.title }}</a></h2>
+
+								{% if entry is defined and entry.level > 0 %}
+								   		 {% if entry.section.handle == "directory" %}
+								        <li><a href="/{{entry.section.getUrlFormat | slice(0,-7)}}">{{entry.section.name}}</a> <i class="fa fa-chevron-right" aria-hidden="true"></i></li>
+								      {% endif %}
+								        {% for crumb in entry.getAncestors() %}
+								            <li>In  <a>{{ crumb.getLink() }}</a></li>
+								        {% endfor %}
+
+								{% endif %}
+
+						</li>
+					{% endfor %}
+				</ul>
+			{% else %}
+				<p>Your search for “{{ query }}” didn’t return any results.</p>
+			{% endif %}
+		</div>
+	</section>
+</div>
+{% include 'partials/sidebar' %}
+
+</div>
+{% endblock %}

@@ -1,0 +1,20 @@
+
+
+<p>{{ entry.recipe.name }}</p> - the name of the recipe
+<p>{{ entry.recipe.description }}</p> - the description of the recipe
+<p>{{ entry.recipe.skill }}</p>- the skill level required to make this recipe
+<p>{{ entry.recipe.serves }}</p> - how many people the recipe serves
+<p>{{ entry.recipe.getImageUrl() }}</p> - a URL to the image for the recipe
+<p>{{ entry.recipe.prepTime }}</p> - the prep time for the recipe in minutes
+<p>{{ entry.recipe.cookTime }}</p> - the cooking time for the recipe in minutes
+<p>{{ entry.recipe.totalTime }}</p> - the total time for the recipe in minutes
+
+{% set ingredients = entry.recipe.getIngredients('imperial', 1) %}
+{% for ingredient in ingredients %}
+    {{ ingredient }}
+{% endfor %}
+
+{% set directions = entry.recipe.getDirections() %}
+{% for direction in directions %}
+    {{ direction }}
+{% endfor %}

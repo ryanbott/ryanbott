@@ -1,0 +1,17 @@
+{% if entry.type.handle == 'redirect' %}
+  {% redirect entry.pageLink.url 301 %}
+{% endif %}
+
+{% extends "_layout" %}
+{% set title = entry.title %}
+{% block content %}
+
+<div class="">
+  <h1>{{ entry.title }}</h1>
+  
+  {% for block in entry.recipeContent.level(1) %}
+    {% include 'blocks/' ~ block.type.handle ignore missing with {'block': block} %}
+  {% endfor %}
+</div>
+
+{% endblock %}

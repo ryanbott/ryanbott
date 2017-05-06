@@ -1,0 +1,106 @@
+
+.search {
+	appearance:none;
+	background-color: transparent;
+	border:none;
+	font-family:inherit;
+	font-size:inherit;
+	font-weight: inherit;
+	color:red;
+	outline:none;
+	cursor: pointer;
+input {
+	font-size:95%;
+}
+&_form {
+	display:none;
+	input {
+		appearance:none;
+		border:0;
+		width:95%;
+		padding: .25em;
+    padding-top:.5em;
+		font-size:1.125em;
+		font-weight:100;
+
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		  color: grey;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+		  color: grey;
+		}
+		&:-ms-input-placeholder { /* IE 10+ */
+		  color: grey;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+		  color: grey;
+		}
+		&::-webkit-search-decoration, &::-webkit-search-cancel-button {
+			display:none;
+		}
+		&:-webkit-autofill {
+			background-color: grey !important;
+			-webkit-box-shadow: 0 0 0px 1000px $main inset;
+		}
+		&:focus {
+			outline:none;
+		}
+	}
+	input[type=submit] {
+		position:absolute;
+		left:-999em;
+	}
+	background-color: #333;
+	top: 1.75em;
+	padding:.5em 0;
+	position:absolute;
+	border-bottom:1px solid red;
+	&__form {
+		padding-left: 2.5em;
+		padding-right:2em;
+	}
+	&:before {
+		content:'';
+		height:2em;
+		width:2em;
+		display:block;
+		vertical-align: middle;
+		position:absolute;
+		@media (--tablet-min) {
+			left:60px;
+		}
+		@media (--tablet-max) {
+			left:0;
+			top:50%;
+			transform: translateY(-50%);
+		}
+		background-image: svg("search");
+	}
+	&.open {
+		transition: max-width .3s cubic-bezier(0.74, 0.48, 0.18, 1.08);
+		max-width:1000px;
+	}
+}
+.search_close {
+		display:none;
+		position:absolute;
+		height:16px;
+		width:16px;
+		right:0;
+		top:50%;
+		transform:translateY(-50%);
+		appearance:none;
+		background-color:transparent;
+		border:none;
+		outline:none;
+		background-image: svg("close");
+		cursor: pointer;
+		span {
+			position:absolute;
+			left:-999em;
+		}
+		@media (--mobile-max) {
+			/*display:none;*/
+		}
+	}
+}

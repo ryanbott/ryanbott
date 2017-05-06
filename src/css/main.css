@@ -1,0 +1,35 @@
+@charset "UTF-8";
+/*Node module css imports*/
+@import 'normalize.css/normalize.css';
+@import 'hamburgers/dist/hamburgers.css';
+@import 'slick-carousel/slick/slick.css';
+
+/*Site specific css imports*/
+@import 'partials/defaults.css';
+@import 'partials/header.css';
+@import 'partials/search.css';
+@import 'partials/blocks.css';
+@import 'partials/accordion.css';
+@import 'partials/slider.css';
+
+/*CSS Variable declarations*/
+:root {
+  --main: #FDFEFF;
+  --teal: #5DC7CC;
+  --main: #333;
+  --fade1: rgba(62, 68, 70, .99);
+  --fade2: rgba(27, 97, 110, .90);
+  --offwhite: #ECECE4;
+
+  --gen: "Geneva", Verdana, Helvetica, Arial, Sans-Serif;
+  --pal: "Palatino", serif;
+}
+
+/*Breakpoints for postcss-custom-media*/
+/*@custom-media --desktop-up (min-width:1100px);*/
+@custom-media --desktop-min (min-width:1100px);
+@custom-media --desktop-max (max-width:1100px);
+@custom-media --tablet-min (min-width:777px);
+@custom-media --tablet-max (max-width:777px);
+@custom-media --mobile-min (min-width:421px);
+@custom-media --mobile-max (max-width:421px);

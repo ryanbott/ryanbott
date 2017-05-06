@@ -1,0 +1,39 @@
+[
+    {
+        "version": "1.0.3",
+        "downloadUrl": "https://github.com/nystudio107/recipe/archive/master.zip",
+        "date": "2017-01-05T05:00:00.637Z",
+        "notes": [
+            "[Added] Added support for 1/3, 2/3, and 1/6 fractions",
+            "[Improved] Updated the README.md"
+        ]
+    },
+    {
+        "version": "1.0.2",
+        "downloadUrl": "https://github.com/nystudio107/recipe/archive/master.zip",
+        "date": "2016-09-18T05:00:00.637Z",
+        "notes": [
+            "[Fixed] Handle empty ingredients lists without erroring",
+            "[Fixed] Handle empty directions without erroring",
+            "[Improved] Updated the README.md"
+        ]
+    },
+    {
+        "version": "1.0.1",
+        "downloadUrl": "https://github.com/nystudio107/recipe/archive/master.zip",
+        "date": "2016-05-01T05:00:00.637Z",
+        "notes": [
+            "[Fixed] Fixed a minor issue with Recipe if it was embedded in a Matrix field",
+            "[Added] Added the 'Skill Level' field",
+            "[Improved] Updated the README.md"
+        ]
+    },
+    {
+        "version": "1.0.0",
+        "downloadUrl": "https://github.com/nystudio107/recipe/archive/master.zip",
+        "date": "2016-05-01T02:56:00.637Z",
+        "notes": [
+            "[Added] Initial release"
+        ]
+    }
+]
