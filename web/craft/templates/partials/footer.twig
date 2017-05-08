@@ -1,29 +1,18 @@
 <footer id="footer" class="footer">
-
-  <div class="footer_top">
-    <div class="row">
-      <div class="footer_top_half">
-
-      </div>
-      <div class="footer_top_half">
-
-      </div>
-    </div>
-
-
-  </div> <!--END footer_top-->
   <div class="footer_main">
     <div class="container row">
-      <div class="c_3">
+      <div class="c_3_block">
+        <div class="footer_block">
         <div class="footer_logo">
-          <a href="{{ siteUrl }}"><img src="http://rb.dev/globals/rb.png)" alt=""><span> {{ siteName }} </span></a>
+          <a href="{{ siteUrl }}"><img src="http://rb.dev/globals/rb_logo_white.png" alt=""><span> {{ siteName }} </span></a>
         </div>
         <div class="footer_social">
           {% for icons in footer.socialIcon %}
-            <a href="{{icons.socialLink}}"  alt="{{icons.socialName}}"><i class="fa fa-{{icons.iconImage}}" aria-hidden="true"></i></a>
+            <a href="{{icons.socialLink.url}}"  alt="{{icons.socialName}}"><i class="fa fa-{{icons.iconImage}} {{icons.iconImage}}" aria-hidden="true"></i></a>
           {% endfor %}
         </div>
-        <span class="location">OKC</span>
+        <!-- <span class="location">OKC</span> -->
+      </div>
       </div>
       <div class="c_3">
         <p>Explore</p>

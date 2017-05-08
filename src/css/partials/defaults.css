@@ -72,20 +72,30 @@ a {
 
 		}
 	}
-	&_3 {
+	&_3_block {
 		lost-column: 1/4 0;
 		@media (--mobile-max) {
 				lost-column:1;
 				padding-bottom:2em;
-
+		}
+	}
+	&_3 {
+		lost-column: 1/4 0;
+		@media (--mobile-max) {
+				lost-column:1/2;
+				padding-bottom:2em;
 		}
 	}
 	&_2 {
 		lost-column: 1/6 0;
 		@media (--mobile-max) {
-				lost-column:1;
+				lost-column:1/2;
 				padding-bottom:2em;
 
 		}
 	}
+}
+.c_2:nth-child(2n + 1) {
+    clear: none;
+		margin-right:0;
 }

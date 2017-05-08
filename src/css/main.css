@@ -22,6 +22,7 @@
   --fade1: rgba(62, 68, 70, .99);
   --fade2: rgba(27, 97, 110, .90);
   --offwhite: #ECECE4;
+  --yellow: #FDC85A;
 
   --gen: "Geneva", Verdana, Helvetica, Arial, Sans-Serif;
   --pal: "Palatino", serif;
@@ -31,7 +32,9 @@
 /*@custom-media --desktop-up (min-width:1100px);*/
 @custom-media --desktop-min (min-width:1100px);
 @custom-media --desktop-max (max-width:1100px);
-@custom-media --tablet-min (min-width:777px);
-@custom-media --tablet-max (max-width:777px);
-@custom-media --mobile-min (min-width:421px);
-@custom-media --mobile-max (max-width:421px);
+@custom-media --tablet-min (min-width:781px);
+@custom-media --tablet-max (max-width:781px);
+@custom-media --mobile-min (min-width:541px);
+@custom-media --mobile-max (max-width:541px);
+@custom-media --tiny-min (min-width:361px);
+@custom-media --tiny-max (max-width:361px);

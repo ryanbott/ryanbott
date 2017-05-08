@@ -1,13 +1,30 @@
 .footer {
   background: var(--main);
 
+  &_block {
+    @media(--mobile-max) {
+      display:block;
+      width: 100%;
+    }
+  }
+
   &_logo {
-    width: 128px;
-    height:128px;
+    padding:1em 0;
+    img {
+      width:64px;
+      height:64px;
+    }
     span {
       position:absolute;
       margin-left: -999em;
     }
+  }
+  &_social {
+    .instagram {&:hover {color: #D6C9B5;}}
+    .dribbble {&:hover {color: #E44A87;}}
+    .staplegun {&:hover {color: #CD2228;}}
+    .twitter {&:hover {color: #4099ff;}}
+    .500px {&:hover {color: #202020;}}
   }
 
   &_main {
@@ -22,13 +39,15 @@
       color: var(--offwhite);
       text-decoration:none;
       text-transform:none;
+      &:hover {
+        color:white;
+        text-decoration:underline;
+      }
     }
     i.fa {
       font-size:2em;
       padding:.25em;
     }
-
-
   }
   &_bottom {
     background-color: #2d2d2d;
@@ -48,10 +67,15 @@
         font-size:.8em;
         color:#939393;
       }
+      @media(--tablet-max) {
+        width: 72%;
+      }
+      @media(--mobile-max) {
+        width: 88%;
+      }
     }
   }
 }
-
 .copyright {
   color: #939393;
   font-size:12px;
@@ -60,6 +84,6 @@
 .location {
   color: var(--offwhite);
   float:left;
-  margin-top: 4em;
+  margin-top: 6em;
   clear:both;
 }

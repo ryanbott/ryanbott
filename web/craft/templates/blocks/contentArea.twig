@@ -1,6 +1,9 @@
-{% if block.sectionHeader | length %}
-<hr>
-  <h2>{{ block.sectionHeader }}</h2>
-{% endif %}
-  {{block.sectionBody}}
-  <br>
+<div class="row">
+  <div class="contentArea">
+  {% if block.sectionHeader | length %}
+    <h2>{{ block.sectionHeader }}</h2>
+  {% endif %}
+    {{block.sectionBody}}
+    <br>
+  </div>
+</div>

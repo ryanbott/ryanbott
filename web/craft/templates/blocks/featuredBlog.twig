@@ -1,0 +1,34 @@
+<section id="featuredBlog">
+<div class="featuredBlog">
+  <div class="row">
+
+  <div class="featuredBlog_image" style="background-image: url({{block.blockImage.first().url}})">
+
+    <div class="featuredBlog_title">
+    <h3><a {% if block.darkText %}style="color:#333"{% endif %}; href="{{block.featuredEntry.first().url}}">{{block.featuredEntry.first().title}}</a></h3>
+    <hr class="header_line" style="background-color:{{ block.color }};">
+    {% if block.category|length %}
+      {% for category in block.category %}
+        <p {% if block.darkText %}style="color:#333"{% endif %}; class="category">{{category}}</p>
+      {% endfor %}
+    {% endif %}
+    </div>
+  </div>
+  <div class="featuredBlog_text">
+    {% if block.thumbnails|length %}
+    <div class="featuredBlog_gallery">
+      {% for photo in block.thumbnails %}
+        <img src="{{photo.url}}" alt="{{photo}}">
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="featuredBlog_summary">
+      <p>{{block.summary}}</p>
+    </div>
+    <div class="featuredBlog_button">
+      <a href="{{block.featuredEntry.first().url}}"><span class="" style="border: 1px solid {{block.color}}">Keep Reading</span></a>
+    </div>
+  </div>
+  </div>
+</div>
+</section>

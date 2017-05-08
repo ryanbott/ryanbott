@@ -1,6 +1,14 @@
 .header {
-
-  span {
-    margin-left: -999em;
+  &_logo {
+    position:absolute;
+    padding:1em;
+    img {
+      width:64px;
+      height:64px;
+    }
+    span {
+      position:absolute;
+      margin-left: -999em;
+    }
   }
 }

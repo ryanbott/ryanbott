@@ -1,21 +1,30 @@
 <section>
-{% set blogLoop = craft.entries.section('blog').relatedTo('{{categorySelector}}').order('postDate desc').limit(4) %}
+{% set blogLoop = craft.entries.section('blog').relatedTo('{{categorySelector}}').order('postDate desc').limit(1) %}
   {% if blogLoop | length %}
-  <div class="news" style="background-color:{{block.color}}">
+
+  <div class="blog" style="background-color:{{block.color}}">
     <div class="row">
       <h2>{{block.sectionHeader}}</h2>
       <p>{{block.sectionBody}}</p>
 
         {% for blogItem in blogLoop %}
-          <div class="news_item">
-              <h3><a href="{{blogItem.url}}">{{ blogItem.title }}</a></h3>
-
+          <div class="blog_item c_6">
+            <h3><a href="{{blogItem.url}}">{{ blogItem.title }}</a></h3>
           </div>
         {% endfor %}
     </div>
   </div>
     {% endif %}
+
+    {# Displays 4 random nextItem entries #}
+{% set nextItems = craft.entries.section('blog').id('not '~entry.id).order('score').limit(4) %}
+  {% if nextItems | length %}
+
+    {% for nextItem in nextItems %}
+      <div class="blog_next_item">
+        <h4><a href="{{ nextItem.url }}">{{ nextItem.title }}</a></h4>
+        {{ nextItem.summary }}
+      </div>
+    {% endfor %}
+  {% endif %}
 </section>
-
-
-</div>

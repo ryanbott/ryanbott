@@ -1,7 +1,19 @@
+.contentArea {
+  padding: 2em;
+  margin:auto;
+  width:72%;
+  @media(--mobile-max) {
+    width: 100%;
+  }
+}
 .half {
   &_text {
-    padding:2em 4em 4em;
+    padding:1em 3em 0;
     width: 50%;
+    @media(--mobile-max) {
+      width: 100%;
+      padding: 1em 2em;
+    }
   }
   &_image {
     img {
@@ -9,15 +21,25 @@
       height:100%;
       max-height: 24em;
       background-size:contain;
+      @media(--mobile-max) {
+        width: 100%;
+        max-height: 16em;
+        float:left;
+      }
     }
   }
-}
+} /*END .half */
 
 .recipe {
-  margin-bottom:1em;
+  h1 {
+    @media(--tablet-max) {
+      padding: .5em 0;
+      font-size:3em;
+    }
+  }
   &_text {
     float:left;
-    padding:2em 4em 4em;
+    padding:2em 4em;
     width: 50%;
     &_title {
       position: absolute;
@@ -25,10 +47,21 @@
     }
     &_content {
       margin-top:13em;
+      @media(--mobile-max) {
+        margin-top:12em;
+
+      }
+    }
+    @media(--mobile-max) {
+      width:100%;
+      padding: 2em;
     }
   }
   &_overflow {
     width:74%;
+    @media(--mobile-max) {
+      width:94%;
+    }
   }
   &_image {
     img {
@@ -36,6 +69,10 @@
       width:50%;
       background-size:contain;
       float:right;
+      @media(--mobile-max) {
+        width:100%;
+        float:left;
+      }
     }
   }
   &_lead {
@@ -45,12 +82,173 @@
     display:block;
     font-size:2.4em;
     float:right;
-    color: var(--teal);
+    color: var(--offwhite);
   }
   &_scroll {
     text-align:center;
     border: 2px solid red;
     border-radius: 6px;
+  }
+}
 
+.featuredBlog {
+  background-color:#151516;
+  margin-top:3em;
+
+  &_image {
+    width:50%;
+    float:left;
+    background-size: cover;
+    height:40em;
+    @media(--mobile-max) {
+      width:100%;
+      height:20em;
+    }
+  }
+  &_title {
+    padding: 6em 3em;
+    a {
+      font-family: var(--pal);
+      font-weight: 100;
+      font-size: 3em;
+      color: var(--offwhite);
+    }
+    @media(--tablet-max) {
+      a {
+        font-size:2em;
+      }
+    }
+    @media(--mobile-max) {
+      padding: 2em;
+    }
+  }
+  &_text {
+    width:50%;
+    float: right;
+    padding: 6em 3em 3em;
+    @media(--mobile-max) {
+      width:100%;
+      float:none;
+      padding: 22em 2em 4em;
+    }
+  }
+  &_gallery {
+    padding: 0;
+
+    display:flex;
+    @media(--desktop-min) {
+      display:inline-block;
+    }
+    img {
+      padding:6px;
+      width:180px;
+      height:120px;
+      background-size: contain;
+      display:inline;
+    }
+    p {
+      color: var(--offwhite);
+    }
+  }
+  &_summary {
+    padding:2em .5em;
+    p {
+      color: var(--offwhite);
+      line-height:1.4em;
+    }
+  }
+  &_button {
+    background-color:transparent;
+    span {
+      padding:.5em 1em;
+      border-radius: 6px;
+    }
+    a {
+      letter-spacing:1px;
+      color:white;
+      text-decoration:none;
+      text-transform:uppercase;
+    }
+    &:hover {
+      span {
+        background-color: var(--teal);
+      }
+      a {
+        color: var(--main)
+      }
+
+    }
+  }
+}
+.overlay {
+  position:absolute;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  background:rgba(255,255,255,.5);
+  text-align:center;
+}
+p.category {
+  color: var(--offwhite);
+  font-size: 18px;
+}
+
+.blog {
+  padding: 1em 2em;
+
+  h3 {
+    a {
+      color: var(--main);
+      &:hover {
+        text-decoration:underline;
+      }
+    }
+  }
+}
+
+.newsletter {
+  background-color: var(--yellow);
+  text-align:center;
+  h3 {
+    font-size:1.4em;
+    line-height:1.4em;
+    font-family: var(--gen);
+    color:white;
+    text-align:center;
+  }
+  form {
+    cursor:pointer;
+    margin: auto;
+    height: 38px;
+    width: 76%;
+    background-color:white;
+    border-radius: 6px;
+    .button_submit {
+      background-color: var(--offwhite);
+      float:right;
+      width:80px;
+      color:var(--main);
+      height: 100%;
+      padding:.6em;
+      border-top-right-radius: 6px;
+  		border-bottom-right-radius: 6px;
+      &:hover {
+        background-color:var(--main);
+        color:var(--offwhite);
+      }
+    }
+  }
+  p.notice {
+    font-size: 12px;
+    color: #333;
+    padding-top:1.25em;
+    margin: auto;
+    width: 60%;
+  }
+
+  &_form {
+  padding: 2em;
+  margin:auto;
+  width: 76%;
   }
 }
