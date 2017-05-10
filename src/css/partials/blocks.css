@@ -91,6 +91,32 @@
   }
 }
 
+.gallery {
+  margin:auto;
+  text-align:center;
+  h2 {
+    text-align:center;
+    font-family: var(--pal);
+    font-size: 2em;
+  }
+  img {
+    width: 24.6%;
+    height:300px;
+    background-size: contain;
+  }
+  @media(--tablet-max) {
+    img {
+      width: 33%;
+      height:260px;
+    }
+  }
+  @media(--mobile-max) {
+    img {
+      width: 49%;
+      height:200px;
+    }
+  }
+}
 .featuredBlog {
   background-color:#151516;
   margin-top:3em;

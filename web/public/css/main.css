@@ -1760,6 +1760,32 @@ a:hover {
   border: 2px solid red;
   border-radius: 6px;
 }
+.gallery {
+  margin:auto;
+  text-align:center;
+}
+.gallery h2 {
+  text-align:center;
+  font-family: "Palatino", serif;
+  font-size: 2em;
+}
+.gallery img {
+  width: 24.6%;
+  height:300px;
+  background-size: contain;
+}
+@media(max-width:781px) {
+  .gallery img {
+    width: 33%;
+    height:260px;
+  }
+}
+@media(max-width:541px) {
+  .gallery img {
+    width: 49%;
+    height:200px;
+  }
+}
 .featuredBlog {
   background-color:#151516;
   margin-top:3em;
