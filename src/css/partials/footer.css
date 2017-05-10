@@ -76,6 +76,19 @@
     }
   }
 }
+.focus_button {
+  text-decoration:none !important;
+  border: 1px solid var(--teal);
+  padding: .4em .8em;
+  border-radius: 10px;
+  margin-left: -.8em;
+  &:hover {
+    background-color: var(--teal);
+    color: var(--main);
+    font-weight:bold;
+    box-shadow: 0px 1px 4px 1px rgba(24, 24, 24, 0.35);
+  }
+}
 .copyright {
   color: #939393;
   font-size:12px;

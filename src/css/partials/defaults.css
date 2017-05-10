@@ -4,6 +4,9 @@
 html {
   overflow-x: hidden;
 }
+body {
+	background-color: #f9fafc;
+}
 section {
 	clear:fix;
 }
