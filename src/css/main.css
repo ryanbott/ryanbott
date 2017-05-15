@@ -26,6 +26,9 @@
 
   --gen: "Geneva", Verdana, Helvetica, Arial, Sans-Serif;
   --pal: "Palatino", serif;
+  --lato: "Lato", sans-serif;
+  --shadow: 6px 6px 24px 0 rgba(26, 45, 63, .37);
+  --shadow-light: 2px 2px 12px 0 rgba(26, 45, 63, .37);
 }
 
 /*Breakpoints for postcss-custom-media*/

@@ -2,6 +2,7 @@
   &_logo {
     position:absolute;
     padding:1em;
+    z-index:999;
     img {
       width:64px;
       height:64px;

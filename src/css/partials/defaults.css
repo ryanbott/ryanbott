@@ -7,6 +7,9 @@ html {
 body {
 	background-color: #f9fafc;
 }
+main {
+	background: #f9fafc;
+}
 section {
 	clear:fix;
 }
@@ -24,13 +27,15 @@ h1 {
 	font-weight: 100;
 }
 h2 {
-	font-family: var(--gen);
+	font-family: var(--lato);
 	font-size: 1.5em/1.5em;
-	font-weight:100;
+	font-weight:400;
 }
 p {
-	font-family: var(--gen);
-	font-size: 1em;
+	font-family: var(--lato);
+	font-size: 18px;
+	letter-spacing:1px;
+	line-height: 24px;
 	color: var(--main);
 }
 a {
@@ -42,8 +47,8 @@ a {
 .header_line {
 	background: var(--teal);
 	background-color: var(--teal);
-	height:4px;
-	width:22px;
+	height:2px;
+	width:42px;
 	border-style: none;
 	border-width: 0;
 	margin-left:0;
