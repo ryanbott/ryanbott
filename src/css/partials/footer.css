@@ -33,12 +33,24 @@
       font-size: 1.5em;
       color: grey;
       text-transform: uppercase;
+      @media(--tablet-max) {
+        font-size:1em;
+      }
+      @media(--mobile-max) {
+        font-size:1.5em;
+      }
     }
     a {
       font-size:.8em;
       color: var(--offwhite);
       text-decoration:none;
       text-transform:none;
+      @media(--tablet-max) {
+        font-size:.7em;
+      }
+      @media(--tablet-max) {
+        font-size:.8em;
+      }
       &:hover {
         color:white;
         text-decoration:underline;
@@ -71,7 +83,7 @@
         width: 72%;
       }
       @media(--mobile-max) {
-        width: 88%;
+        width: 92%;
       }
     }
   }
