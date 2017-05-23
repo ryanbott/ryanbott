@@ -1,14 +1,18 @@
 .contentArea {
-  padding: 2em;
+  text-align:center;
+  padding:1em 2em 2em;
   margin:auto;
   width:72%;
-  @media(--mobile-max) {
+  @media(--tablet-max) {
     width: 100%;
   }
 }
 .half {
+  p {
+    padding-bottom: .25em;
+  }
   &_text {
-    padding:1em 3em 0;
+    padding:1em 3em .5em;
     width: 50%;
     @media(--tablet-max) {
       padding: 1em 1.5em;
@@ -37,12 +41,31 @@
       }
     }
   }
+  &_button {
+    padding: 1em 1.25em;
+    margin: .5em *;
+    border-radius: 6px;
+    box-shadow: var(--shadow-light);
+    a {
+      font-family: var(--gen);
+      font-size: 1em;
+      font-weight:bold;
+      color: white;
+      text-decoration:none;
+    }
+    &:hover {
+      transform:scale(1.1);
+      box-shadow: var(--shadow);
+
+    }
+  }
 } /*END .half */
 
 .recipe {
   width: 100%;
   margin: 2em;
   max-width: 1100px;
+  padding-bottom:2em;
   h1 {
     @media(--tablet-max) {
       padding: .5em 0;
@@ -158,7 +181,7 @@
 }
 .featuredBlog {
   background-color:#151516;
-  margin-top:3em;
+  margin:3em *;
 
   &_image {
     width:50%;
@@ -177,7 +200,7 @@
       font-family: var(--pal);
       font-weight: 100;
       font-size: 3em;
-      color: var(--offwhite);
+      color: white;
     }
     @media(--tablet-max) {
       a {

@@ -16,9 +16,9 @@
 {% extends "_layout" %}
 
 {% block content %}
-	<article>
-		<h1>{{ entry.title }}</h1>
-		<p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-		{{ entry.body }}
-	</article>
+<div class="">
+  {% for block in entry.homeContent.level(1) %}
+    {% include 'blocks/' ~ block.type.handle ignore missing with {'block': block} %}
+  {% endfor %}
+</div>
 {% endblock %}

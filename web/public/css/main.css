@@ -1673,17 +1673,21 @@ a:hover {
   }
 }
 .contentArea {
-  padding: 2em;
+  text-align:center;
+  padding:1em 2em 2em;
   margin:auto;
   width:72%;
 }
-@media(max-width:541px) {
+@media(max-width:781px) {
   .contentArea{
     width: 100%;
   }
 }
+.half p {
+  padding-bottom: .25em;
+}
 .half_text {
-  padding:1em 3em 0;
+  padding:1em 3em .5em;
   width: 50%;
 }
 @media(max-width:781px) {
@@ -1716,11 +1720,31 @@ a:hover {
   box-shadow: 6px 6px 24px 0 rgba(26, 45, 63, .37);
   transition: .3s;
 }
+.half_button {
+  padding: 1em 1.25em;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  border-radius: 6px;
+  box-shadow: 2px 2px 12px 0 rgba(26, 45, 63, .37);
+}
+.half_button a {
+  font-family: "Geneva", Verdana, Helvetica, Arial, Sans-Serif;
+  font-size: 1em;
+  font-weight:700;
+  color: white;
+  text-decoration:none;
+}
+.half_button:hover {
+  -webkit-transform:scale(1.1);
+          transform:scale(1.1);
+  box-shadow: 6px 6px 24px 0 rgba(26, 45, 63, .37);
+}
 /*END .half */
 .recipe {
   width: 100%;
   margin: 2em;
   max-width: 1100px;
+  padding-bottom:2em;
 }
 @media(max-width:781px) {
   .recipe h1{
@@ -1854,7 +1878,8 @@ a:hover {
 }
 .featuredBlog {
   background-color:#151516;
-  margin-top:3em;
+  margin-top: 3em;
+  margin-bottom: 3em;
 }
 .featuredBlog_image {
   width:50%;
@@ -1877,7 +1902,7 @@ a:hover {
   font-family: "Palatino", serif;
   font-weight: 100;
   font-size: 3em;
-  color: #ECECE4;
+  color: white;
 }
 @media(max-width:781px) {
   .featuredBlog_title a {

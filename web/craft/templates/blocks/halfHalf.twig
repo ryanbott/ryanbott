@@ -4,9 +4,15 @@
       <h2 class="">{{ block.sectionHeader}}</h2>
       <hr class="header_line" style="background-color:{{ block.color }};">
       <p>{{block.sectionBody}}</p>
+
+        <span class="half_button" style="background-color:{{block.color}};"><a href="{{block.buttonLink.url}}" {{block.buttonLink.target}}>{{block.buttonLink.text}}</a></span>
+
+
     </div>
     <div class="half_image">
-      <img src="{{ block.blockImage.first().url}}" alt="{{ block.blockImage.first().title}}">
+      {% if block.blockImage|length > 0%}
+        <img src="{{ block.blockImage.first().url}}" alt="{{ block.blockImage.first().title}}">
+      {% endif %}
     </div>
   </div>
 </section>
