@@ -23,6 +23,9 @@
     }
   }
   &_image {
+    @media(max-width: 940px) {
+      margin-top:2em;
+    }
     img {
       width:50%;
       height:100%;
@@ -42,10 +45,15 @@
     }
   }
   &_button {
+    font-family: var(--gen);
+    font-size: 1em;
+    font-weight:bold;
+    color: white;
     padding: 1em 1.25em;
-    margin: .5em *;
+    margin: 1em;
     border-radius: 6px;
     box-shadow: var(--shadow-light);
+    transition: box-shadow .2s  font-size .5s ease;
     a {
       font-family: var(--gen);
       font-size: 1em;
@@ -54,10 +62,14 @@
       text-decoration:none;
     }
     &:hover {
-      transform:scale(1.1);
+      text-decoration: none;
+      font-size: 1.02em;
       box-shadow: var(--shadow);
 
     }
+  }
+  a:hover {
+    text-decoration: none;
   }
 } /*END .half */
 
@@ -153,6 +165,7 @@
 }
 
 .gallery {
+  margin-top:3em;
   margin:auto;
   text-align:center;
   h2 {
@@ -249,7 +262,7 @@
   &_button {
     background-color:transparent;
     span {
-      padding:.5em 1em;
+      padding:1em;
       border-radius: 6px;
     }
     a {
@@ -260,7 +273,7 @@
     }
     &:hover {
       span {
-        background-color: var(--teal);
+        background-color: var(--midwhite);
       }
       a {
         color: var(--main)
@@ -296,6 +309,7 @@ p.category {
 }
 
 .newsletter {
+  margin-top:3em;
   background-color: var(--yellow);
   text-align:center;
   h3 {

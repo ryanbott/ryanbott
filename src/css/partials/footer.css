@@ -1,4 +1,5 @@
 .footer {
+  margin-top: 3em;
   background: var(--main);
 
   &_block {
@@ -10,6 +11,7 @@
 
   &_logo {
     padding:1em 0;
+    transition: transform .2s ease;
     img {
       width:64px;
       height:64px;
@@ -17,6 +19,11 @@
     span {
       position:absolute;
       margin-left: -999em;
+    }
+    &:hover {
+      transform: scale(1.01);
+      filter: contrast(200%);
+      /*box-shadow:var(--shadow-light);*/
     }
   }
   &_social {
@@ -97,7 +104,6 @@
   &:hover {
     background-color: var(--teal);
     color: var(--main);
-    font-weight:bold;
     box-shadow: 0px 1px 4px 1px rgba(24, 24, 24, 0.35);
   }
 }

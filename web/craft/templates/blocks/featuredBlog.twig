@@ -5,13 +5,15 @@
   <div class="featuredBlog_image" style="background-image: url({{block.blockImage.first().url}})">
 
     <div class="featuredBlog_title">
-    <h3><a {% if block.darkText %}style="color:#333"{% endif %}; href="{{block.featuredEntry.first().url}}">{{block.featuredEntry.first().title}}</a></h3>
+  {% if block.featuredEntry|length %}
+    <h3><a {% if block.darkText %}style="color:#333"{% endif %}; href="{{block.buttonLink.url}}"{{block.buttonLink.target}}>{{block.sectionHeader}}</a></h3>
     <hr class="header_line" style="background-color:{{ block.color }};">
     {% if block.category|length %}
       {% for category in block.category %}
         <p {% if block.darkText %}style="color:#333"{% endif %}; class="category">{{category}}</p>
       {% endfor %}
     {% endif %}
+  {% endif %}
     </div>
   </div>
   <div class="featuredBlog_text">
@@ -26,7 +28,7 @@
       <p>{{block.summary}}</p>
     </div>
     <div class="featuredBlog_button">
-      <a href="{{block.featuredEntry.first().url}}"><span class="" style="border: 1px solid {{block.color}}">Keep Reading</span></a>
+      <a href="{{block.buttonLink.url}}"{{block.buttonLink.target}}><span class="" style="border: 1px solid {{block.color}}">{{block.buttonLink.text}}</span></a>
     </div>
   </div>
   </div>

@@ -10,6 +10,7 @@
 @import 'partials/search.css';
 @import 'partials/blocks.css';
 @import 'partials/accordion.css';
+@import 'partials/form.css';
 @import 'partials/slider.css';
 @import 'partials/footer.css';
 
@@ -23,6 +24,23 @@
   --fade2: rgba(27, 97, 110, .90);
   --offwhite: #ECECE4;
   --yellow: #FDC85A;
+
+
+  /*new color scheme*/
+  --main-blue: #242A46;
+  --red: #A56D73;
+  --pale: #E0D9E3;
+  --purple: #6B6A88;
+  --light-purple: #9997B2;
+  --peach: #F8B1A2;
+  --beige: #F3C8AF;
+
+  /*foggy night  color scheme*/
+  --darkblue: #4C5156;
+  --gold: #8d765a;
+  --midblue: #758092;
+  --lightblue: #99A1A8;
+  --midwhite: #D8DDDD;
 
   --gen: "Geneva", Verdana, Helvetica, Arial, Sans-Serif;
   --pal: "Palatino", serif;
